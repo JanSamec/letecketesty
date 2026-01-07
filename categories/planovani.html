@@ -5,103 +5,100 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Právní předpisy v oblasti letectví</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
-  <header class="flex justify-between items-center px-6 py-4 border-b">
-    <div class="flex items-center space-x-2">
-      <div class="bg-blue-600 p-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
-          <path d="M2.5 19.5l19-7.5-19-7.5v5l14 2.5-14 2.5v5z"/>
-        </svg>
-      </div>
-      <h1 class="text-2xl font-bold text-blue-700">Letecké testy</h1>
-    </div>
-    <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700">Přihlásit se</a>
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-gray-900 min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 xl:py-5 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center space-x-2 xl:space-x-3 hover:opacity-80 transition">
+        <div class="w-10 h-10 xl:w-12 xl:h-12 bg-blue-600 rounded-full">
+          
+        </a>
+        <h1 class="text-xl sm:text-2xl xl:text-3xl font-bold text-gray-900">Letecké testy</h1>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="../ppl-categories.html" class="text-xs sm:text-sm xl:text-base font-semibold text-gray-700 hover:text-blue-700 px-3 sm:px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg hover:bg-blue-50 transition">
+        </a>
+        <a href="#" class="hidden sm:inline text-xs sm:text-sm xl:text-base font-semibold text-gray-700 hover:text-blue-700 px-3 sm:px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg hover:bg-blue-50 transition">
+          Statistiky
+        </a>
+        <a href="#" class="text-xs sm:text-sm xl:text-base font-semibold bg-gray-900 text-white px-4 sm:px-5 xl:px-6 py-2 xl:py-2.5 rounded-lg hover:bg-gray-800 transition">
+          Přihlásit se
+        </a>
+      </a>
+    </a>
   </header>
 
   <main class="flex-grow">
-    <div class="max-w-7xl mx-auto px-6 py-8">
-      <a href="../index.html" class="text-blue-700 hover:text-blue-800 mb-6 flex items-center w-fit">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-        </svg>
-        Zpět na výběr oblasti
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <a href="../ppl-categories.html" class="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold mb-6 transition">
+        ← Zpět
       </a>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Právní předpisy v oblasti letectví</h2>
 
-      <h2 class="text-4xl font-bold text-blue-700 mb-6">Právní předpisy v oblasti letectví</h2>
-
-      <div class="flex gap-6 items-start mb-10">
+      <div class="flex flex-col lg:flex-row gap-6 items-start mb-8 sm:mb-12">
         <div class="flex-1">
-          <p class="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          <p class="text-gray-600 leading-relaxed text-sm sm:text-base lg:text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-        </div>
-        <div class="w-64 h-48 bg-gray-200 rounded-lg flex items-center justify-center text-gray-500 font-semibold flex-shrink-0">
+        </a>
+        <div class="w-full lg:w-64 h-40 sm:h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center text-gray-400 font-semibold flex-shrink-0 border border-gray-300 rounded-2xl">
           IMG
-        </div>
-      </div>
-    </div>
+        </a>
+      </a>
+    </a>
 
-    <div class="bg-gray-50 py-10">
-      <div class="max-w-7xl mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="bg-white py-8 sm:py-12 border-y border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           
-          <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex flex-col">
-            <h3 class="text-2xl font-bold text-gray-900 text-center mb-6">Procházet otázky</h3>
+          <div class="bg-gradient-to-br from-white to-blue-50 border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Procházet otázky</h3>
             
             <div class="flex-grow">
               <div class="space-y-3 mb-6">
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span class="text-gray-700 font-medium">Celkový počet otázek:</span>
-                  <span class="text-lg font-bold text-blue-700">X</span>
-                </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span class="text-gray-700 font-medium">Správně zodpovězeno:</span>
-                  <span class="text-lg font-semibold text-green-600">0</span>
-                </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span class="text-gray-700 font-medium">Špatně zodpovězeno:</span>
-                  <span class="text-lg font-semibold text-red-600">0</span>
-                </div>
-                <div class="flex justify-between items-center py-2 border-b">
-                  <span class="text-gray-700 font-medium">Nezodpovězeno:</span>
-                  <span class="text-lg font-semibold text-gray-600">X</span>
-                </div>
-                <div class="flex justify-between items-center py-2">
-                  <span class="text-gray-700 font-medium">Dokončeno:</span>
-                  <span class="text-lg font-bold text-blue-700">0%</span>
-                </div>
-              </div>
-            </div>
+                <div class="flex justify-between items-center py-2.5 border-b border-gray-200">
+                  <span class="text-gray-700 font-medium text-sm sm:text-base">Celkový počet otázek:</span>
+                  <span class="text-base sm:text-lg font-semibold text-gray-600">X</span>
+                </a>
+                <div class="flex justify-between items-center py-2.5">
+                  <span class="text-gray-700 font-medium text-sm sm:text-base">Dokončeno:</span>
+                  <span class="text-base sm:text-lg font-bold text-blue-700">0%</span>
+                </a>
+              </a>
+            </a>
 
-            <div class="flex gap-4 mt-4">
-              <button class="flex-1 bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-4">
+              <button class="flex-1 bg-gray-900 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all text-sm sm:text-base">
                 Procházet
               </button>
-              <button class="flex-1 bg-gray-200 text-gray-700 px-6 py-3 rounded-md font-medium hover:bg-gray-300 transition">
+              <button class="flex-1 bg-gray-100 text-gray-700 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all border border-gray-200 text-sm sm:text-base">
                 Stáhnout PDF
               </button>
-            </div>
-          </div>
+            </a>
+          </a>
 
-          <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8 flex flex-col">
-            <h3 class="text-2xl font-bold text-gray-900 text-center mb-6">Trénovat otázky</h3>
+          <div class="bg-gradient-to-br from-white to-indigo-50 border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col">
+            <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Trénovat otázky</h3>
             
             <div class="space-y-4 flex-grow">
               <div>
-                <label class="block text-sm font-semibold mb-2 text-gray-700">Časový limit na otázku:</label>
-                <select id="time-limit" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <label class="block text-sm sm:text-base font-semibold mb-2 text-gray-700">Časový limit na otázku:</label>
+                <select id="time-limit" class="w-full border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm sm:text-base">
                   <option value="0">Bez limitu</option>
                   <option value="10">10 sekund</option>
                   <option value="20">20 sekund</option>
                   <option value="30">30 sekund</option>
                   <option value="60">60 sekund</option>
                 </select>
-              </div>
+              </a>
 
               <div>
-                <label class="block text-sm font-semibold mb-2 text-gray-700">Počet otázek:</label>
-                <select id="question-count" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <label class="block text-sm sm:text-base font-semibold mb-2 text-gray-700">Počet otázek:</label>
+                <select id="question-count" class="w-full border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm sm:text-base">
                   <option value="2">2 otázky (demo)</option>
                   <option value="20">20 otázek</option>
                   <option value="50">50 otázek</option>
@@ -109,49 +106,49 @@
                   <option value="unpracticed">Necvičené otázky</option>
                   <option value="least">Nejméně cvičené</option>
                 </select>
-              </div>
+              </a>
 
               <div>
-                <label class="block text-sm font-semibold mb-2 text-gray-700">Bodovací režim:</label>
-                <select id="scoring-mode" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <label class="block text-sm sm:text-base font-semibold mb-2 text-gray-700">Bodovací režim:</label>
+                <select id="scoring-mode" class="w-full border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm sm:text-base">
                   <option value="standard">Standardní (správně/špatně)</option>
                   <option value="negative">Záporné hodnocení</option>
                   <option value="time-weighted">Vážený časem</option>
                 </select>
-              </div>
+              </a>
 
               <div>
-                <label class="block text-sm font-semibold mb-2 text-gray-700">Pořadí otázek:</label>
-                <select id="question-order" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <label class="block text-sm sm:text-base font-semibold mb-2 text-gray-700">Pořadí otázek:</label>
+                <select id="question-order" class="w-full border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm sm:text-base">
                   <option value="fixed">Pevné</option>
                   <option value="random">Náhodné</option>
                 </select>
-              </div>
+              </a>
 
               <div>
-                <label class="block text-sm font-semibold mb-2 text-gray-700">Kontrola odpovědí:</label>
-                <select id="answer-review" class="w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <label class="block text-sm sm:text-base font-semibold mb-2 text-gray-700">Kontrola odpovědí:</label>
+                <select id="answer-review" class="w-full border-2 border-gray-200 rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-sm sm:text-base">
                   <option value="after-each">Po každé otázce</option>
                   <option value="after-quiz">Až po kvízu</option>
                   <option value="no-review">Bez kontroly</option>
                 </select>
-              </div>
-            </div>
+              </a>
+            </a>
 
-            <button onclick="startQuiz()" class="w-full bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition mt-6">
+            <button onclick="startQuiz()" class="w-full bg-gray-900 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all mt-6 text-sm sm:text-base">
               Začít trénink
             </button>
-          </div>
+          </a>
 
-        </div>
-      </div>
-    </div>
+        </a>
+      </a>
+    </a>
   </main>
 
-  <footer class="bg-blue-100 py-4 mt-auto">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-600">
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-gray-600">
       © 2025 Letecké testy – všechna práva vyhrazena.
-    </div>
+    </a>
   </footer>
 
   <script src="../js/main.js"></script>

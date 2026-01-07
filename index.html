@@ -3,102 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letecké testy – Oblasti studia</title>
+  <title>Letecké testy – Hlavní menu</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
-  <header class="flex justify-between items-center px-6 py-4 border-b">
-    <div class="flex items-center space-x-2">
-      <div class="bg-blue-600 p-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
-          <path d="M2.5 19.5l19-7.5-19-7.5v5l14 2.5-14 2.5v5z"/>
-        </svg>
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-gray-900 min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 xl:py-5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 xl:space-x-3 hover:opacity-80 transition">
+        <div class="w-10 h-10 xl:w-12 xl:h-12 bg-blue-600 rounded-full"></div>
+        <h1 class="text-xl sm:text-2xl xl:text-3xl font-bold text-gray-900">Letecké testy</h1>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="#" class="text-xs sm:text-sm xl:text-base font-semibold text-gray-700 hover:text-blue-700 px-3 sm:px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg hover:bg-blue-50 transition">
+          Statistiky
+        </a>
+        <a href="#" class="text-xs sm:text-sm xl:text-base font-semibold bg-gray-900 text-white px-4 sm:px-5 xl:px-6 py-2 xl:py-2.5 rounded-lg hover:bg-gray-800 transition">
+          Přihlásit se
+        </a>
       </div>
-      <h1 class="text-2xl font-bold text-blue-700">Letecké testy</h1>
     </div>
-    <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700">Přihlásit se</a>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 py-10 flex-grow">
-    <h2 class="text-center text-xl font-semibold mb-10">Vyber si oblast ke studiu</h2>
+  <main class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 flex-grow w-full">
+    <div class="text-center mb-8 sm:mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">Vyberte typ testování</h2>
+      <p class="text-gray-600 text-base sm:text-lg">Procvičujte otázky nebo absolvujte zkušební testy</p>
+    </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Právní předpisy v oblasti letectví</h3>
-          <p class="text-sm text-gray-700">Obsahuje národní a mezinárodní předpisy, pravidla pro piloty, provoz letadel a bezpečnostní normy.</p>
+    <div class="space-y-4 sm:space-y-6">
+      <!-- PPL Questions -->
+      <div class="bg-white hover:shadow-xl transition-all duration-300 border border-gray-200 rounded-2xl overflow-hidden group">
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div class="flex-1">
+              <div class="mb-3 sm:mb-4">
+                <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-wide mb-3 rounded-lg">
+                  Příprava na PPL
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Otázky na PPL</h3>
+              </div>
+              <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                Procvičujte si otázky z jednotlivých oblastí pro získání pilotní licence PPL. Obsahuje právní předpisy, meteorologii, navigaci, lidskou výkonnost a další kategorie.
+              </p>
+              <a href="ppl-categories.html" class="inline-flex items-center gap-2 bg-gray-900 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all text-sm sm:text-base">
+                Začít procvičovat
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="categories/pravni.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 px-6 sm:px-8 py-3 sm:py-4 border-t border-gray-100">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-blue-600"></div>
+              9 kategorií
+            </span>
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-blue-600"></div>
+              Různé obtížnosti
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Lidská výkonnost</h3>
-          <p class="text-sm text-gray-700">Zahrnuje fyziologii pilota, stres, únavu, hypoxii a faktory ovlivňující schopnost bezpečného letu.</p>
+      <!-- PPL Exam -->
+      <div class="bg-white hover:shadow-xl transition-all duration-300 border border-gray-200 rounded-2xl overflow-hidden group">
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div class="flex-1">
+              <div class="mb-3 sm:mb-4">
+                <span class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold uppercase tracking-wide mb-3 rounded-lg">
+                  Zkouška
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Zkušební test na PPL</h3>
+              </div>
+              <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                Simulujte reálnou zkoušku na PPL licenci. Test obsahuje mix otázek ze všech kategorií s časovým limitem a oficiálním hodnocením.
+              </p>
+              <a href="ppl-exam.html" class="inline-flex items-center gap-2 bg-green-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-green-800 transition-all text-sm sm:text-base">
+                Zahájit zkušební test
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="categories/lidska.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
+        <div class="bg-gradient-to-r from-green-50 to-emerald-50 px-6 sm:px-8 py-3 sm:py-4 border-t border-gray-100">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-green-600"></div>
+              Časový limit 2 hodiny
+            </span>
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-green-600"></div>
+              Oficiální formát
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Meteorologie</h3>
-          <p class="text-sm text-gray-700">Pokrývá počasí, jeho vliv na let, meteorologické mapy, předpovědi a interpretaci dat.</p>
+      <!-- Radio Questions -->
+      <div class="bg-white hover:shadow-xl transition-all duration-300 border border-gray-200 rounded-2xl overflow-hidden group">
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div class="flex-1">
+              <div class="mb-3 sm:mb-4">
+                <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs font-semibold uppercase tracking-wide mb-3 rounded-lg">
+                  Radiotelefonistika
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Otázky na radiotelefonistiku</h3>
+              </div>
+              <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                Procvičte si znalosti pro zkoušku radiotelefonisty. Obsahuje radiokomunikaci, fráze, procedury a nouzové postupy.
+              </p>
+              <a href="categories/radio.html" class="inline-flex items-center gap-2 bg-purple-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-purple-800 transition-all text-sm sm:text-base">
+                Začít procvičovat
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="categories/meteorologie.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
+        <div class="bg-gradient-to-r from-purple-50 to-pink-50 px-6 sm:px-8 py-3 sm:py-4 border-t border-gray-100">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-purple-600"></div>
+              Radiokomunikace
+            </span>
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-purple-600"></div>
+              Nouzové procedury
+            </span>
+          </div>
+        </div>
       </div>
 
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Komunikace</h3>
-          <p class="text-sm text-gray-700">Zahrnuje radiokomunikaci, standardní fráze, nouzové postupy a procedury s řízením letového provozu.</p>
+      <!-- Radio Exam -->
+      <div class="bg-white hover:shadow-xl transition-all duration-300 border border-gray-200 rounded-2xl overflow-hidden group">
+        <div class="p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div class="flex-1">
+              <div class="mb-3 sm:mb-4">
+                <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-wide mb-3 rounded-lg">
+                  Zkouška
+                </span>
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Zkušební test na radiotelefonistiku</h3>
+              </div>
+              <p class="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+                Simulujte reálnou zkoušku na radiotelefonní průkaz. Test ověří vaše znalosti radiokomunikace v letectví s časovým limitem.
+              </p>
+              <a href="radio-exam.html" class="inline-flex items-center gap-2 bg-orange-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-orange-800 transition-all text-sm sm:text-base">
+                Zahájit zkušební test
+                <span class="group-hover:translate-x-1 transition-transform">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-        <a href="categories/komunikace.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
-      </div>
-
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Letové zásady</h3>
-          <p class="text-sm text-gray-700">Zahrnuje aerodynamiku, principy letu, manévrování, vzlet, přistání a chování letadla v různých podmínkách.</p>
+        <div class="bg-gradient-to-r from-orange-50 to-amber-50 px-6 sm:px-8 py-3 sm:py-4 border-t border-gray-100">
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-600">
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-orange-600"></div>
+              Časový limit 1 hodina
+            </span>
+            <span class="flex items-center gap-2">
+              <div class="w-1 h-1 bg-orange-600"></div>
+              Oficiální formát
+            </span>
+          </div>
         </div>
-        <a href="categories/letove.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
-      </div>
-
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Provozní postupy</h3>
-          <p class="text-sm text-gray-700">Zabývá se standardními postupy před letem, během letu a po letu, nouzovými postupy a kontrolními seznamy.</p>
-        </div>
-        <a href="categories/provozni.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
-      </div>
-
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Provedení a plánování letu</h3>
-          <p class="text-sm text-gray-700">Pokrývá plánování tras, spotřebu paliva, navigaci, počasí a koordinaci s řízením letového provozu.</p>
-        </div>
-        <a href="categories/planovani.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
-      </div>
-
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Obecné znalosti o letadle</h3>
-          <p class="text-sm text-gray-700">Obsahuje konstrukci letadla, motory, systémy, avioniku a údržbu.</p>
-        </div>
-        <a href="categories/znalosti.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
-      </div>
-
-      <div class="bg-blue-100 rounded-xl p-5 flex flex-col justify-between shadow-sm">
-        <div>
-          <h3 class="font-semibold text-lg mb-2">Navigace</h3>
-          <p class="text-sm text-gray-700">Zahrnuje navigační techniky, mapy, kompas, GPS a plánování letových tras.</p>
-        </div>
-        <a href="categories/navigace.html" class="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md font-medium self-start hover:bg-blue-800 transition text-center">Učit se</a>
       </div>
     </div>
   </main>
 
-  <footer class="bg-blue-100 py-4 mt-auto">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-600">
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-gray-600">
       © 2025 Letecké testy – všechna práva vyhrazena.
     </div>
   </footer>

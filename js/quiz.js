@@ -78,7 +78,7 @@ function loadQuestion() {
   answersDiv.innerHTML = '';
   question.answers.forEach(answer => {
     const btn = document.createElement('button');
-    btn.className = 'w-full text-left border-2 border-gray-300 rounded-md px-4 py-3 hover:border-blue-500 transition';
+    btn.className = 'w-full text-left border-2 border-gray-300 rounded-xl px-4 py-3 hover:border-blue-500 transition';
     btn.innerHTML = `<span class="font-semibold">${answer.letter}.</span> ${answer.text}`;
     btn.onclick = () => selectAnswer(answer.letter, answer.correct);
     answersDiv.appendChild(btn);
@@ -86,6 +86,7 @@ function loadQuestion() {
 
   if (settings.timeLimit && parseInt(settings.timeLimit) > 0) {
     timeRemaining = parseInt(settings.timeLimit);
+    document.getElementById('timer').style.display = 'block';
     updateTimer();
     timerInterval = setInterval(() => {
       timeRemaining--;
@@ -98,7 +99,7 @@ function loadQuestion() {
       }
     }, 1000);
   } else {
-    document.getElementById('timer').textContent = '';
+    document.getElementById('timer').style.display = 'none';
   }
 }
 

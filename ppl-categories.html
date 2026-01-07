@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPL - Výběr kategorie</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-gray-900 min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 xl:py-5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 xl:space-x-3 hover:opacity-80 transition">
+        <div class="w-10 h-10 xl:w-12 xl:h-12 bg-blue-600 rounded-full"></div>
+        <h1 class="text-xl sm:text-2xl xl:text-3xl font-bold text-gray-900">Letecké testy</h1>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="#" class="text-xs sm:text-sm xl:text-base font-semibold text-gray-700 hover:text-blue-700 px-3 sm:px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg hover:bg-blue-50 transition">
+          Statistiky
+        </a>
+        <a href="#" class="text-xs sm:text-sm xl:text-base font-semibold bg-gray-900 text-white px-4 sm:px-5 xl:px-6 py-2 xl:py-2.5 rounded-lg hover:bg-gray-800 transition">
+          Přihlásit se
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10 flex-grow">
+    <div class="mb-8 sm:mb-10">
+      <a href="index.html" class="inline-flex items-center gap-2 text-blue-700 hover:text-blue-800 font-semibold mb-6 transition">
+        ← Zpět
+      </a>
+      <h2 class="text-3xl sm:text-4xl font-bold mb-2 sm:mb-3 text-gray-900">Vyber si oblast ke studiu</h2>
+      <p class="text-gray-600 text-base sm:text-lg">PPL - Pilotní licence</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Právní předpisy v oblasti letectví</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Národní a mezinárodní předpisy, pravidla pro piloty a bezpečnostní normy.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/pravni.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Lidská výkonnost</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Fyziologie pilota, stres, únava, hypoxie a faktory ovlivňující bezpečný let.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/lidska.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Meteorologie</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Počasí, jeho vliv na let, meteorologické mapy a interpretace dat.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/meteorologie.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Komunikace</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Radiokomunikace, standardní fráze a procedury s řízením letového provozu.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/komunikace.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Letové zásady</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Aerodynamika, principy letu, manévrování a chování letadla.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/letove.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Provozní postupy</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Standardní postupy před, během a po letu, nouzové procedury.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/provozni.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Provedení a plánování letu</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Plánování tras, spotřeba paliva, navigace a koordinace s ATC.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/planovani.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Obecné znalosti o letadle</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Konstrukce letadla, motory, systémy, avionika a údržba.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/znalosti.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+
+      <div class="group bg-white p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300 rounded-2xl flex flex-col">
+        <h3 class="font-bold text-lg sm:text-xl text-gray-900 mb-3 sm:mb-4">Navigace</h3>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed flex-grow">Navigační techniky, mapy, kompas, GPS a plánování tras.</p>
+        <div class="mt-6 flex justify-end">
+          <a href="categories/navigace.html" class="inline-flex items-center gap-2 bg-blue-700 text-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl font-semibold hover:bg-blue-800 transition-all text-sm">
+            Učit se
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-gray-600">
+      © 2025 Letecké testy – všechna práva vyhrazena.
+    </div>
+  </footer>
+</body>
+</html>

@@ -5,86 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz - Letecké testy</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
 </head>
-<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
-  <header class="flex justify-between items-center px-6 py-4 border-b">
-    <div class="flex items-center space-x-2">
-      <div class="bg-blue-600 p-2 rounded-full">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-5 h-5">
-          <path d="M2.5 19.5l19-7.5-19-7.5v5l14 2.5-14 2.5v5z"/>
-        </svg>
+<body class="bg-gradient-to-br from-slate-50 via-white to-blue-50 text-gray-900 min-h-screen flex flex-col">
+  <header class="bg-white/80 backdrop-blur-sm border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 xl:py-5 flex justify-between items-center">
+      <a href="index.html" class="flex items-center space-x-2 xl:space-x-3 hover:opacity-80 transition">
+        <div class="w-10 h-10 xl:w-12 xl:h-12 bg-blue-600 rounded-full"></div>
+        <h1 class="text-xl sm:text-2xl xl:text-3xl font-bold text-gray-900">Letecké testy</h1>
+      </a>
+      <div class="flex items-center gap-2 sm:gap-4">
+        <button onclick="exitQuiz()" class="text-xs sm:text-sm xl:text-base font-semibold text-red-600 hover:text-red-700 px-3 sm:px-4 xl:px-5 py-2 xl:py-2.5 rounded-lg hover:bg-red-50 transition">
+          Ukončit trénink
+        </button>
       </div>
-      <h1 class="text-2xl font-bold text-blue-700">Letecké testy</h1>
     </div>
-    <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700">Přihlásit se</a>
   </header>
 
-  <main class="max-w-3xl mx-auto px-6 py-10 flex-grow">
-    <div class="flex justify-between items-center mb-6">
-      <button onclick="exitQuiz()" class="text-blue-700 hover:text-blue-800 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd" />
-        </svg>
-        Ukončit trénink
-      </button>
-      <div id="timer" class="text-lg font-semibold text-blue-700"></div>
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-10 flex-grow w-full">
+    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 mb-6">
+      <div class="text-xs sm:text-sm text-gray-600 bg-white px-3 sm:px-4 py-2 border border-gray-200 rounded-xl">
+        Otázka <span id="question-number" class="font-bold text-blue-700">1</span> z <span id="total-questions" class="font-bold">2</span>
+      </div>
+      <div id="timer" class="text-base sm:text-lg font-bold text-blue-700 bg-white px-4 sm:px-5 py-2 border-2 border-blue-200 rounded-xl"></div>
     </div>
 
-    <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-      <div class="mb-4">
-        <span class="text-sm text-gray-600">Otázka <span id="question-number">1</span> z <span id="total-questions">2</span></span>
-      </div>
+    <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden">
+      <div class="p-6 sm:p-8">
+        <h3 id="question-text" class="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-gray-900 leading-relaxed">Toto je text otázky</h3>
 
-      <h3 id="question-text" class="text-xl font-semibold mb-6">Toto je text otázky</h3>
+        <div id="answers" class="space-y-3 mb-6"></div>
 
-      <div id="answers" class="space-y-3 mb-6"></div>
+        <div id="feedback" class="hidden mb-6 p-4 border-2 rounded-xl">
+          <p id="feedback-text" class="text-xs sm:text-sm font-semibold"></p>
+        </div>
 
-      <div id="feedback" class="hidden mb-4">
-        <p id="feedback-text" class="text-sm"></p>
-      </div>
-
-      <div class="flex justify-between">
-        <button onclick="skipQuestion()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-md font-medium hover:bg-gray-300 transition">Přeskočit</button>
-        <button id="next-btn" onclick="nextQuestion()" class="hidden bg-blue-700 text-white px-6 py-2 rounded-md font-medium hover:bg-blue-800 transition">Další otázka</button>
+        <div class="flex flex-col sm:flex-row justify-between items-stretch sm:items-center gap-3 pt-6 border-t border-gray-200">
+          <button onclick="skipQuestion()" class="bg-gray-100 text-gray-700 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-200 transition-all border border-gray-200 text-sm sm:text-base">
+            Přeskočit →
+          </button>
+          <button id="next-btn" onclick="nextQuestion()" class="hidden bg-gray-900 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all text-sm sm:text-base">
+            Další otázka →
+          </button>
+        </div>
       </div>
     </div>
   </main>
 
-  <div id="results-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4 shadow-xl">
-      <h2 class="text-2xl font-bold text-blue-700 mb-6 text-center">Výsledky kvízu</h2>
+  <div id="results-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white p-6 sm:p-8 max-w-lg w-full mx-4 border border-gray-200 rounded-2xl">
+      <div class="text-center mb-6 sm:mb-8">
+        <div class="w-16 h-16 bg-gray-900 flex items-center justify-center mx-auto mb-4">
+          <div class="w-10 h-10 border-4 border-white transform rotate-45"></div>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Výsledky kvízu</h2>
+        <p class="text-gray-600 text-sm sm:text-base">Podívejte se, jak jste si vedli</p>
+      </div>
       
-      <div class="space-y-4 mb-6">
-        <div class="flex justify-between items-center border-b pb-2">
-          <span class="text-gray-700 font-medium">Skóre:</span>
-          <span id="final-score" class="text-2xl font-bold text-blue-700">0/0</span>
+      <div class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+        <div class="flex justify-between items-center p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-100 rounded-xl">
+          <span class="text-gray-700 font-semibold text-sm sm:text-base">Skóre:</span>
+          <span id="final-score" class="text-2xl sm:text-3xl font-bold text-blue-700">0/0</span>
         </div>
-        <div class="flex justify-between items-center border-b pb-2">
-          <span class="text-gray-700 font-medium">Správných odpovědí:</span>
-          <span id="correct-count" class="text-lg font-semibold text-green-600">0</span>
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          <div class="flex flex-col items-center p-3 sm:p-4 bg-green-50 border border-green-200 rounded-xl">
+            <span class="text-xs sm:text-sm text-gray-700 font-medium mb-1">Správných</span>
+            <span id="correct-count" class="text-xl sm:text-2xl font-bold text-green-600">0</span>
+          </div>
+          <div class="flex flex-col items-center p-3 sm:p-4 bg-red-50 border border-red-200 rounded-xl">
+            <span class="text-xs sm:text-sm text-gray-700 font-medium mb-1">Chybných</span>
+            <span id="incorrect-count" class="text-xl sm:text-2xl font-bold text-red-600">0</span>
+          </div>
         </div>
-        <div class="flex justify-between items-center border-b pb-2">
-          <span class="text-gray-700 font-medium">Chybných odpovědí:</span>
-          <span id="incorrect-count" class="text-lg font-semibold text-red-600">0</span>
+        <div class="flex justify-between items-center p-3 sm:p-4 bg-gray-50 border border-gray-200 rounded-xl">
+          <span class="text-gray-700 font-medium text-sm sm:text-base">Celkový čas:</span>
+          <span id="total-time" class="text-base sm:text-lg font-bold text-gray-900">0s</span>
         </div>
-        <div class="flex justify-between items-center border-b pb-2">
-          <span class="text-gray-700 font-medium">Celkový čas:</span>
-          <span id="total-time" class="text-lg font-semibold">0s</span>
-        </div>
-        <div class="flex justify-between items-center">
-          <span class="text-gray-700 font-medium">Průměrný čas/otázka:</span>
-          <span id="avg-time" class="text-lg font-semibold">0s</span>
+        <div class="flex justify-between items-center p-3 sm:p-4 bg-gray-50 border border-gray-200 rounded-xl">
+          <span class="text-gray-700 font-medium text-sm sm:text-base">Průměr/otázka:</span>
+          <span id="avg-time" class="text-base sm:text-lg font-bold text-gray-900">0s</span>
         </div>
       </div>
 
-      <button onclick="closeResults()" class="w-full bg-blue-700 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-800 transition">
+      <button onclick="closeResults()" class="w-full bg-gray-900 text-white px-6 py-3 sm:py-4 rounded-xl font-bold hover:bg-gray-800 transition-all text-base sm:text-lg">
         Zpět na kategorii
       </button>
     </div>
   </div>
 
-  <footer class="bg-blue-100 py-4 mt-auto">
-    <div class="max-w-6xl mx-auto px-6 text-center text-sm text-gray-600">
+  <footer class="bg-white border-t border-gray-200 py-6 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center text-xs sm:text-sm text-gray-600">
       © 2025 Letecké testy – všechna práva vyhrazena.
     </div>
   </footer>
